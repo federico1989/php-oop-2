@@ -1,10 +1,11 @@
 <?php
     include __DIR__ . "/classes/users.php";
+    include __DIR__ . "/classes/person.php";
 
     $users = [
-        new User ('Peter','Parker', 28, 'spider@gmail.com'),
-        new User ('Tony','Stark', 42, 'iron@gmail.com'),
-        new User ('Steve','Rodgers', 63, 'america@gmail.com')
+        new User ('Spiderman','spider@gmail.com','abc123'),
+        new User ('Ironman','iron@gmail.com','abc123'),
+        new User ('Capitan America','america@gmail.com','abc123')
     ];
     // var_dump($users);
 ?>
@@ -17,10 +18,9 @@
     </head>
     <body>
         <?php foreach ($users as $user) { ?>
-            <h3><?php echo $user->name; ?></h3>
-            <h3><?php echo $user->surname; ?></h3>
-            <div><span><?php echo $user->age; ?></span></div>
+            <h3><?php echo $user->user_name; ?></h3>
             <div><span><?php echo $user->email; ?></span></div>
+            <div><span><?php echo $user->password; ?></span></div>
         <?php } ?>
     </body>
 </html>

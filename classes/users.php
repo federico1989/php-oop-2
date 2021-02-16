@@ -5,17 +5,15 @@
  * @copyright 2021 Fede User
  */
     class User {
-        public $name;
-        public $surname;
-        public $age;
+        public $user_name;
         public $email;
+        public $password;
 
-        public function __construct(string $name, string $surname, int $age, string $email)
+        public function __construct(string $user_name, string $email, string $password)
         {
-            $this->name = $name;
-            $this->surname = $surname;
-            $this->age = $age;
+            $this->user_name = $user_name;
             $this->email = $email;
+            $this->password = $password;
         }
     }
 ?>
