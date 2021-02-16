@@ -1,18 +1,13 @@
 <?php
+    include __DIR__ . "/classes/users.php";
 
-/** Users class
- * @author Fede User user@gmail.com
- * @copyright 2021 Fede User
- */
-    class Users {
-        public $name;
-        public $surname;
-        public $age;
-        public $email;
-    }
-
+    $users = [
+        new User ('Peter','Parker', 28, 'spider@gmail.com'),
+        new User ('Tony','Stark', 42, 'iron@gmail.com'),
+        new User ('Steve','Rodgers', 63, 'america@gmail.com')
+    ];
+    // var_dump($users);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,6 +16,11 @@
         <title>Php oop 2</title>
     </head>
     <body>
-
+        <?php foreach ($users as $user) { ?>
+            <h3><?php echo $user->name; ?></h3>
+            <h3><?php echo $user->surname; ?></h3>
+            <div><span><?php echo $user->age; ?></span></div>
+            <div><span><?php echo $user->email; ?></span></div>
+        <?php } ?>
     </body>
 </html>
