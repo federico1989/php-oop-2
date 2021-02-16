@@ -21,10 +21,9 @@
             <h3><?php echo $user->name; ?></h3>
             <h3><?php echo $user->surname; ?></h3>
             <div><span><?php echo $user->age; ?></span></div>
-            <div><span><?php echo $user_name->user_name; ?></span></div>
+            <div><span><?php echo $user->user_name; ?></span></div>
             <div><span><?php echo $user->email; ?></span></div>
             <div><span><?php echo $user->password; ?></span></div>
-            
         <?php } ?>
     </body>
 </html>
